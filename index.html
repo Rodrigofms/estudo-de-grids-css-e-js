@@ -1,0 +1,2081 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pokedex</title>
+
+<!-- Import Icon -->
+  <link rel="icon" type="image/png" href="/assets/media/favicon.png">
+
+<!-- Import Normalize.css -->
+  <link href="
+  https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css
+  " rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+<!-- Import Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,500;1,700&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/pokemon-solid" rel="stylesheet">
+
+<!-- Import Css -->
+  <link rel="stylesheet" href="assets/css/global.css">
+  <link rel="stylesheet" href="assets/css/pokedex.css">
+</head>
+
+<body>
+  <div id="audio">
+    <audio controls autoplay id="music" preload="auto">
+      <source src="/assets/media/music.mp3" type="audio/mpeg">
+  </div>
+  <section class="content">
+    <h1 class="titulos" id="titulo">Kanto Pokedex</h1>
+    <div>
+      Music
+      <br>
+      <a onclick="play()"">
+      <button type=" button" class="btn btn-success btn-sm">Play/Pause</button>
+      </a>
+    </div>
+
+    <ol class="pokemons">
+      <li class="pokemon" id="_001">
+        <span class="number">#001</span>
+        <span class="name">Bulbasaur</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type">Grass</li>
+            <li class="type">Poison</li>
+
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg"
+            alt="Bulbasaur image">
+        </div>
+      </li>
+      <li class="pokemon" id="_001">
+        <span class="number">#002</span>
+        <span class="name">Ivysaur</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type">Grass</li>
+            <li class="type">Poison</li>
+
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/2.svg"
+            alt="Ivysaur image">
+        </div>
+      </li>
+      <li class="pokemon" id="_001">
+        <span class="number">#003</span>
+        <span class="name">Venasaur</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type">Grass</li>
+            <li class="type">Poison</li>
+
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/3.svg"
+            alt="Venasaur image">
+        </div>
+      </li>
+      <li class="pokemon" id="_002">
+        <span class="number">#004</span>
+        <span class="name">Charmander</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="fire">Fire</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/4.svg"
+            alt="Charmander image">
+        </div>
+      </li>
+      <li class="pokemon" id="_002">
+        <span class="number">#005</span>
+        <span class="name">Charmeleon</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="fire">Fire</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/5.svg"
+            alt="Charmeleon image">
+        </div>
+      </li>
+      <li class="pokemon" id="_002">
+        <span class="number">#006</span>
+        <span class="name">Charizard</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="fire">Fire</li>
+            <li class="type" id="fire">Flying</li>
+
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/6.svg"
+            alt="Charizard image">
+        </div>
+      </li>
+      <li class="pokemon" id="_003">
+        <span class="number">#007</span>
+        <span class="name">Squirtle</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="water">Water</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/7.svg"
+            alt="Squirtle image">
+        </div>
+      </li>
+      <li class="pokemon" id="_003">
+        <span class="number">#008</span>
+        <span class="name">Wartortle</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="water">Water</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/8.svg"
+            alt="Wartortle image">
+        </div>
+      </li>
+      <li class="pokemon" id="_003">
+        <span class="number">#009</span>
+        <span class="name">Blastoise</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="water">Water</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/9.svg"
+            alt="Blastoise image">
+        </div>
+      </li>
+      <li class="pokemon" id="_004">
+        <span class="number">#010</span>
+        <span class="name">Caterpie</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="bug">Bug</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/10.svg"
+            alt="Caterpie image">
+        </div>
+      </li>
+      <li class="pokemon" id="_004">
+        <span class="number">#011</span>
+        <span class="name">Metapod</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="bug">Bug</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/11.svg"
+            alt="Metapod image">
+        </div>
+      </li>
+      <li class="pokemon" id="_004">
+        <span class="number">#012</span>
+        <span class="name">Butterfree</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="bug">Bug</li>
+            <li class="type" id="bug">Flying</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/12.svg"
+            alt="Butterfree image">
+        </div>
+      </li>
+      <li class="pokemon" id="_004">
+        <span class="number">#013</span>
+        <span class="name">Weedle</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="bug">Bug</li>
+            <li class="type" id="bug">Poison</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/13.svg"
+            alt="Weedle image">
+        </div>
+      </li>
+      <li class="pokemon" id="_004">
+        <span class="number">#014</span>
+        <span class="name">Kakuna</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="bug">Bug</li>
+            <li class="type" id="bug">Poison</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/14.svg"
+            alt="Kakuna image">
+        </div>
+      </li>
+      <li class="pokemon" id="_004">
+        <span class="number">#015</span>
+        <span class="name">Beedrill</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="bug">Bug</li>
+            <li class="type" id="bug">Poison</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/15.svg"
+            alt="Beedrill image">
+        </div>
+      </li>
+      <li class="pokemon" id="_005">
+        <span class="number">#016</span>
+        <span class="name">Pidgey</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="normal">Normal</li>
+            <li class="type" id="normal">Flying</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/16.svg"
+            alt="Pidgey image">
+        </div>
+      </li>
+      <li class="pokemon" id="_005">
+        <span class="number">#017</span>
+        <span class="name">Pidgeotto</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="normal">Normal</li>
+            <li class="type" id="normal">Flying</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/17.svg"
+            alt="Pidgeotto image">
+        </div>
+      </li>
+      <li class="pokemon" id="_005">
+        <span class="number">#018</span>
+        <span class="name">Pidgeot</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="normal">Normal</li>
+            <li class="type" id="normal">Flying</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/18.svg"
+            alt="Pidgeot image">
+        </div>
+      </li>
+      <li class="pokemon" id="_005">
+        <span class="number">#019</span>
+        <span class="name">Rattata</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="normal">Normal</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/19.svg"
+            alt="Rattata image">
+        </div>
+      </li>
+      <li class="pokemon" id="_005">
+        <span class="number">#020</span>
+        <span class="name">Raticate</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="normal">Normal</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/20.svg"
+            alt="Raticate image">
+        </div>
+      </li>
+      <li class="pokemon" id="_005">
+        <span class="number">#021</span>
+        <span class="name">Spearow</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="normal">Normal</li>
+            <li class="type" id="normal">Flying</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/21.svg"
+            alt="Spearow image">
+        </div>
+      </li>
+      <li class="pokemon" id="_005">
+        <span class="number">#022</span>
+        <span class="name">Fearow</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="normal">Normal</li>
+            <li class="type" id="normal">Flying</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/22.svg"
+            alt="Fearow image">
+        </div>
+      </li>
+      <li class="pokemon" id="_006">
+        <span class="number">#023</span>
+        <span class="name">Ekans</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="poison">Poison</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/23.svg"
+            alt="Ekans image">
+        </div>
+      </li>
+      <li class="pokemon" id="_006">
+        <span class="number">#024</span>
+        <span class="name">Arbok</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="poison">Poison</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/24.svg"
+            alt="Arbok image">
+        </div>
+      </li>
+      <li class="pokemon" id="_007">
+        <span class="number">#025</span>
+        <span class="name">Pikachu</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="electric">Electric</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/25.svg"
+            alt="Pikachu image">
+        </div>
+      </li>
+      <li class="pokemon" id="_007">
+        <span class="number">#026</span>
+        <span class="name">Raichu</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="electric">Electric</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/26.svg"
+            alt="Raichu image">
+        </div>
+      </li>
+      <li class="pokemon" id="_008">
+        <span class="number">#027</span>
+        <span class="name">Sandshrew</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="ground">Ground</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/27.svg"
+            alt="Sandshrew image">
+        </div>
+      </li>
+      <li class="pokemon" id="_008">
+        <span class="number">#028</span>
+        <span class="name">Sandslash</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="ground">Ground</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/28.svg"
+            alt="Sandslash image">
+        </div>
+      </li>
+      <li class="pokemon" id="_006">
+        <span class="number">#029</span>
+        <span class="name">Nidoran</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="poison">Poison</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/29.svg"
+            alt="Nidoran image">
+        </div>
+      </li>
+      <li class="pokemon" id="_006">
+        <span class="number">#030</span>
+        <span class="name">Nidorina</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="poison">Poison</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/30.svg"
+            alt="Nidorina image">
+        </div>
+      </li>
+      <li class="pokemon" id="_006">
+        <span class="number">#031</span>
+        <span class="name">Nidoqueen</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="poison">Poison</li>
+            <li class="type" id="poison">Ground</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/30.svg"
+            alt="Nidoqueen image">
+        </div>
+      </li>
+      <li class="pokemon" id="_006">
+        <span class="number">#032</span>
+        <span class="name">Nidoran</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="poison">Poison</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/32.svg"
+            alt="Nidoran image">
+        </div>
+      </li>
+      <li class="pokemon" id="_006">
+        <span class="number">#033</span>
+        <span class="name">Nidorino</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="poison">Poison</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/33.svg"
+            alt="Nidorino image">
+        </div>
+      </li>
+      <li class="pokemon" id="_006">
+        <span class="number">#034</span>
+        <span class="name">Nidoking</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="poison">Poison</li>
+            <li class="type" id="poison">Ground</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/34.svg"
+            alt="Nidorino image">
+        </div>
+      </li>
+      <li class="pokemon" id="_009">
+        <span class="number">#035</span>
+        <span class="name">Clefairy</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="fairy">Fairy</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/35.svg"
+            alt="Clefairy image">
+        </div>
+      </li>
+      <li class="pokemon" id="_009">
+        <span class="number">#036</span>
+        <span class="name">Clefable</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="fairy">Fairy</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/36.svg"
+            alt="Clefable image">
+        </div>
+      </li>
+      <li class="pokemon" id="_002">
+        <span class="number">#037</span>
+        <span class="name">Vulpix</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="fire">Fire</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/37.svg"
+            alt="Vulpix image">
+        </div>
+      </li>
+      <li class="pokemon" id="_002">
+        <span class="number">#038</span>
+        <span class="name">Ninetales</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="fire">Fire</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/38.svg"
+            alt="Ninetales image">
+        </div>
+      </li>
+      <li class="pokemon" id="_005">
+        <span class="number">#039</span>
+        <span class="name">Jigglypuff</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="normal">Normal</li>
+            <li class="type" id="normal">Fairy</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/39.svg"
+            alt="Jigglypuff image">
+        </div>
+      </li>
+      <li class="pokemon" id="_005">
+        <span class="number">#040</span>
+        <span class="name">Wigglytuff</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="normal">Normal</li>
+            <li class="type" id="normal">Fairy</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/40.svg"
+            alt="Wigglytuff image">
+        </div>
+      </li>
+      <li class="pokemon" id="_006">
+        <span class="number">#041</span>
+        <span class="name">Zubat</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="poison">Poison</li>
+            <li class="type" id="poison">Flying</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/41.svg"
+            alt="Zubat image">
+        </div>
+      </li>
+      <li class="pokemon" id="_006">
+        <span class="number">#042</span>
+        <span class="name">Golbat</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="poison">Poison</li>
+            <li class="type" id="poison">Flying</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/42.svg"
+            alt="Golbat image">
+        </div>
+      </li>
+      <li class="pokemon" id="_001">
+        <span class="number">#043</span>
+        <span class="name">Oddish</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="type">Grass</li>
+            <li class="type" id="type">Poison</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/43.svg"
+            alt="Oddish image">
+        </div>
+      </li>
+      <li class="pokemon" id="_001">
+        <span class="number">#045</span>
+        <span class="name">Vileplume</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="type">Grass</li>
+            <li class="type" id="type">Poison</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/45.svg"
+            alt="Vileplume image">
+        </div>
+      </li>
+      <li class="pokemon" id="_004">
+        <span class="number">#046</span>
+        <span class="name">Paras</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="bug">Bug</li>
+            <li class="type" id="bug">Grass</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/46.svg"
+            alt="Paras image">
+        </div>
+      </li>
+      <li class="pokemon" id="_004">
+        <span class="number">#047</span>
+        <span class="name">Parasect</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="bug">Bug</li>
+            <li class="type" id="bug">Grass</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/47.svg"
+            alt="Parasect image">
+        </div>
+      </li>
+      <li class="pokemon" id="_004">
+        <span class="number">#048</span>
+        <span class="name">Venonat</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="bug">Bug</li>
+            <li class="type" id="bug">Poison</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/48.svg"
+            alt="Venonat image">
+        </div>
+      </li>
+      <li class="pokemon" id="_004">
+        <span class="number">#049</span>
+        <span class="name">Venomoth</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="bug">Bug</li>
+            <li class="type" id="bug">Poison</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/49.svg"
+            alt="Venomoth image">
+        </div>
+      </li>
+      <li class="pokemon" id="_008">
+        <span class="number">#050</span>
+        <span class="name">Diglett</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="ground">Ground</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/50.svg"
+            alt="Diglett image">
+        </div>
+      </li>
+      <li class="pokemon" id="_008">
+        <span class="number">#051</span>
+        <span class="name">Dugtrio</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="ground">Ground</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/51.svg"
+            alt="Dugtrio image">
+        </div>
+      </li>
+      <li class="pokemon" id="_005">
+        <span class="number">#052</span>
+        <span class="name">Meowth</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="normal">Normal</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/52.svg"
+            alt="Meowth image">
+        </div>
+      </li>
+      <li class="pokemon" id="_005">
+        <span class="number">#053</span>
+        <span class="name">Persian</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="normal">Normal</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/53.svg"
+            alt="Persian image">
+        </div>
+      </li>
+      <li class="pokemon" id="_003">
+        <span class="number">#054</span>
+        <span class="name">Psyduck</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="water">Water</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/54.svg"
+            alt="Psyduck image">
+        </div>
+      </li>
+      <li class="pokemon" id="_003">
+        <span class="number">#055</span>
+        <span class="name">Golduck</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="water">Water</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/55.svg"
+            alt="Golduck image">
+        </div>
+      </li>
+      <li class="pokemon" id="_010">
+        <span class="number">#056</span>
+        <span class="name">Mankey</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="fighter">Fighter</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/56.svg"
+            alt="Mankey image">
+        </div>
+      </li>
+      <li class="pokemon" id="_010">
+        <span class="number">#057</span>
+        <span class="name">Primeape</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="fighter">Fighter</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/57.svg"
+            alt="Primeape image">
+        </div>
+      </li>
+      <li class="pokemon" id="_002">
+        <span class="number">#058</span>
+        <span class="name">Growlithe</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="fire">Fire</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/58.svg"
+            alt="Growlithe image">
+        </div>
+      </li>
+      <li class="pokemon" id="_002">
+        <span class="number">#059</span>
+        <span class="name">Arcanine</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="fire">Fire</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/59.svg"
+            alt="Arcanine image">
+        </div>
+      </li>
+      <li class="pokemon" id="_003">
+        <span class="number">#060</span>
+        <span class="name">Poliwag</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="water">Water</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/60.svg"
+            alt="Poliwag image">
+        </div>
+      </li>
+      <li class="pokemon" id="_003">
+        <span class="number">#061</span>
+        <span class="name">Poliwhirl</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="water">Water</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/61.svg"
+            alt="Poliwhirl image">
+        </div>
+      </li>
+      <li class="pokemon" id="_003">
+        <span class="number">#062</span>
+        <span class="name">Poliwrath</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="water">Water</li>
+            <li class="type" id="water">Fighter</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/62.svg"
+            alt="Poliwrath image">
+        </div>
+      </li>
+      <li class="pokemon" id="_011">
+        <span class="number">#063</span>
+        <span class="name">Abra</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="psychic">Psychic</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/63.svg"
+            alt="Abra image">
+        </div>
+      </li>
+      <li class="pokemon" id="_011">
+        <span class="number">#064</span>
+        <span class="name">Kadabra</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="psychic">Psychic</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/64.svg"
+            alt="Kadabra image">
+        </div>
+      </li>
+      <li class="pokemon" id="_011">
+        <span class="number">#065</span>
+        <span class="name">Alakazam</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="psychic">Psychic</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/65.svg"
+            alt="Alakazam image">
+        </div>
+      </li>
+      <li class="pokemon" id="_010">
+        <span class="number">#066</span>
+        <span class="name">Machop</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="fighter">Fighter</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/66.svg"
+            alt="Machop image">
+        </div>
+      </li>
+      <li class="pokemon" id="_010">
+        <span class="number">#067</span>
+        <span class="name">Machoke</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="fighter">Fighter</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/67.svg"
+            alt="Machoke image">
+        </div>
+      </li>
+      <li class="pokemon" id="_010">
+        <span class="number">#068</span>
+        <span class="name">Machamp</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="fighter">Fighter</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/68.svg"
+            alt="Machamp image">
+        </div>
+      </li>
+      <li class="pokemon" id="_001">
+        <span class="number">#069</span>
+        <span class="name">Bellsprout</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="type">Grass</li>
+            <li class="type" id="type">Poison</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/69.svg"
+            alt="Bellsprout image">
+        </div>
+      </li>
+      <li class="pokemon" id="_001">
+        <span class="number">#070</span>
+        <span class="name">Weepinbell</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="type">Grass</li>
+            <li class="type" id="type">Poison</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/70.svg"
+            alt="Weepinbell image">
+        </div>
+      </li>
+      <li class="pokemon" id="_001">
+        <span class="number">#071</span>
+        <span class="name">Victreebel</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="type">Grass</li>
+            <li class="type" id="type">Poison</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/71.svg"
+            alt="Victreebel image">
+        </div>
+      </li>
+      <li class="pokemon" id="_003">
+        <span class="number">#072</span>
+        <span class="name">Tentacool</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="water">Water</li>
+            <li class="type " id="water">Poison</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/72.svg"
+            alt="Tentacool image">
+        </div>
+      </li>
+      <li class="pokemon" id="_003">
+        <span class="number">#073</span>
+        <span class="name">Tentacruel</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="water">Water</li>
+            <li class="type " id="water">Poison</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/73.svg"
+            alt="Tentacruel image">
+        </div>
+      </li>
+      <li class="pokemon" id="_012">
+        <span class="number">#074</span>
+        <span class="name">Geodude</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="rock">Rock</li>
+            <li class="type " id="rock">Ground</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/74.svg"
+            alt="Geodude image">
+        </div>
+      </li>
+      <li class="pokemon" id="_012">
+        <span class="number">#075</span>
+        <span class="name">Graveler</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="rock">Rock</li>
+            <li class="type " id="rock">Ground</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/75.svg"
+            alt="Graveler image">
+        </div>
+      </li>
+      <li class="pokemon" id="_012">
+        <span class="number">#076</span>
+        <span class="name">Golem</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="rock">Rock</li>
+            <li class="type " id="rock">Ground</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/76.svg"
+            alt="Golem image">
+        </div>
+      </li>
+      <li class="pokemon" id="_002">
+        <span class="number">#077</span>
+        <span class="name">Ponyta</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="fire">Fire</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/77.svg"
+            alt="Ponyta image">
+        </div>
+      </li>
+      <li class="pokemon" id="_002">
+        <span class="number">#078</span>
+        <span class="name">Rapidash</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="fire">Fire</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/78.svg"
+            alt="Rapidash image">
+        </div>
+      </li>
+      <li class="pokemon" id="_003">
+        <span class="number">#079</span>
+        <span class="name">Slowpoke</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="water">Water</li>
+            <li class="type" id="water">Psychic</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/79.svg"
+            alt="Slowpoke image">
+        </div>
+      </li>
+      <li class="pokemon" id="_003">
+        <span class="number">#080</span>
+        <span class="name">Slowbro</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="water">Water</li>
+            <li class="type" id="water">Psychic</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/80.svg"
+            alt="Slowbro image">
+        </div>
+      </li>
+      <li class="pokemon" id="_007">
+        <span class="number">#081</span>
+        <span class="name">Magnemite</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="electric">Electric</li>
+            <li class="type" id="electric">Steel</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/81.svg"
+            alt="Magnemite image">
+        </div>
+      </li>
+      <li class="pokemon" id="_007">
+        <span class="number">#082</span>
+        <span class="name">Magneton</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="electric">Electric</li>
+            <li class="type" id="electric">Steel</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/82.svg"
+            alt="Magneton image">
+        </div>
+      </li>
+      <li class="pokemon" id="_005">
+        <span class="number">#083</span>
+        <span class="name">Farfetch'd</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="normal">Normal</li>
+            <li class="type" id="normal">Flying</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/83.svg"
+            alt="Farfetch'd image">
+        </div>
+      </li>
+      <li class="pokemon" id="_005">
+        <span class="number">#084</span>
+        <span class="name">Doduo</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="normal">Normal</li>
+            <li class="type" id="normal">Flying</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/84.svg"
+            alt="Doduo image">
+        </div>
+      </li>
+      <li class="pokemon" id="_005">
+        <span class="number">#085</span>
+        <span class="name">Dodtrio</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="normal">Normal</li>
+            <li class="type" id="normal">Flying</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/85.svg"
+            alt="Dodtrio image">
+        </div>
+      </li>
+      <li class="pokemon" id="_003">
+        <span class="number">#086</span>
+        <span class="name">Seel</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="water">Water</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/86.svg"
+            alt="Seel image">
+        </div>
+      </li>
+      <li class="pokemon" id="_003">
+        <span class="number">#087</span>
+        <span class="name">Dewgong</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="water">Water</li>
+            <li class="type" id="water">Ice</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/87.svg"
+            alt="Dewgong image">
+        </div>
+      </li>
+      <li class="pokemon" id="_006">
+        <span class="number">#088</span>
+        <span class="name">Grimer</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="poison">Poison</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/88.svg"
+            alt="Grimer image">
+        </div>
+      </li>
+      <li class="pokemon" id="_006">
+        <span class="number">#089</span>
+        <span class="name">Muk</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="poison">Poison</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/89.svg"
+            alt="Muk image">
+        </div>
+      </li>
+      <li class="pokemon" id="_003">
+        <span class="number">#090</span>
+        <span class="name">Shellder</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="water">Water</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/90.svg"
+            alt="Shellder image">
+        </div>
+      </li>
+      <li class="pokemon" id="_003">
+        <span class="number">#091</span>
+        <span class="name">Cloyster</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="water">Water</li>
+            <li class="type" id="water">Ice</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/91.svg"
+            alt="Cloyster image">
+        </div>
+      </li>
+      <li class="pokemon" id="_015">
+        <span class="number">#092</span>
+        <span class="name">Gastly</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="ghost">Ghost</li>
+            <li class="type" id="ghost">Poison</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/92.svg"
+            alt="Gastly image">
+        </div>
+      </li>
+      <li class="pokemon" id="_015">
+        <span class="number">#093</span>
+        <span class="name">Haunter</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="ghost">Ghost</li>
+            <li class="type" id="ghost">Poison</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/93.svg"
+            alt="Haunter image">
+        </div>
+      </li>
+      <li class="pokemon" id="_015">
+        <span class="number">#094</span>
+        <span class="name">Gengar</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="ghost">Ghost</li>
+            <li class="type" id="ghost">Poison</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/94.svg"
+            alt="Gengar image">
+        </div>
+      </li>
+      <li class="pokemon" id="_012">
+        <span class="number">#095</span>
+        <span class="name">Onix</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="rock">Rock</li>
+            <li class="type" id="rock">Groudon</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/95.svg"
+            alt="Onix image">
+        </div>
+      </li>
+      <li class="pokemon" id="_011">
+        <span class="number">#096</span>
+        <span class="name">Drowzee</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="psychic">Psychic</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/96.svg"
+            alt="Drowzee image">
+        </div>
+      </li>
+      <li class="pokemon" id="_011">
+        <span class="number">#097</span>
+        <span class="name">Hypno</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="psychic">Psychic</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/97.svg"
+            alt="Hypno image">
+        </div>
+      </li>
+      <li class="pokemon" id="_003">
+        <span class="number">#098</span>
+        <span class="name">Krabby</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="water">Water</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/98.svg"
+            alt="Krabby image">
+        </div>
+      </li>
+      <li class="pokemon" id="_003">
+        <span class="number">#099</span>
+        <span class="name">Kingler</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="water">Water</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/99.svg"
+            alt="Kingler image">
+        </div>
+      </li>
+      <li class="pokemon" id="_007">
+        <span class="number">#100</span>
+        <span class="name">Voltorb</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="electric">Electric</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/100.svg"
+            alt="Voltorb image">
+        </div>
+      </li>
+      <li class="pokemon" id="_007">
+        <span class="number">#101</span>
+        <span class="name">Electrode</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="electric">Electric</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/101.svg"
+            alt="Electrode image">
+        </div>
+      </li>
+      <li class="pokemon" id="_001">
+        <span class="number">#102</span>
+        <span class="name">Exeggcute</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="grass">Grass</li>
+            <li class="type" id="psychic">Psychic</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/102.svg"
+            alt="Exeggcute image">
+        </div>
+      </li>
+      <li class="pokemon" id="_001">
+        <span class="number">#103</span>
+        <span class="name">Exeggutor</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="grass">Grass</li>
+            <li class="type" id="psychic">Psychic</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/103.svg"
+            alt="Exeggutor image">
+        </div>
+      </li>
+      <li class="pokemon" id="_008">
+        <span class="number">#104</span>
+        <span class="name">Cubone</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="ground">Ground</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/104.svg"
+            alt="Cubone image">
+        </div>
+      </li>
+      <li class="pokemon" id="_008">
+        <span class="number">#105</span>
+        <span class="name">Marowak</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="ground">Ground</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/105.svg"
+            alt="Marowak image">
+        </div>
+      </li>
+      <li class="pokemon" id="_010">
+        <span class="number">#106</span>
+        <span class="name">Hitmonlee</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="fighter">Fighter</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/106.svg"
+            alt="Hitmonlee image">
+        </div>
+      </li>
+      <li class="pokemon" id="_010">
+        <span class="number">#107</span>
+        <span class="name">Hitmonchan</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="fighter">Fighter</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/107.svg"
+            alt="Hitmonchan image">
+        </div>
+      </li>
+      <li class="pokemon" id="_005">
+        <span class="number">#108</span>
+        <span class="name">Lickitung</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="normal">Normal</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/108.svg"
+            alt="Lickitung image">
+        </div>
+      </li>
+      <li class="pokemon" id="_006">
+        <span class="number">#109</span>
+        <span class="name">Koffing</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="poison">Poison</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/109.svg"
+            alt="Koffing image">
+        </div>
+      </li>
+      <li class="pokemon" id="_006">
+        <span class="number">#110</span>
+        <span class="name">Weezing</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="poison">Poison</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/110.svg"
+            alt="Weezing image">
+        </div>
+      </li>
+      <li class="pokemon" id="_008">
+        <span class="number">#111</span>
+        <span class="name">Rhyhorn</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="ground">Ground</li>
+            <li class="type" id="rock">Rock</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/111.svg"
+            alt="Rhyhorn image">
+        </div>
+      </li>
+      <li class="pokemon" id="_008">
+        <span class="number">#112</span>
+        <span class="name">Rhydon</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="ground">Ground</li>
+            <li class="type" id="rock">Rock</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/112.svg"
+            alt="Rhydon image">
+        </div>
+      </li>
+      <li class="pokemon" id="_005">
+        <span class="number">#113</span>
+        <span class="name">Chansey</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="normal">Normal</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/113.svg"
+            alt="Chansey image">
+        </div>
+      </li>
+      <li class="pokemon" id="_001">
+        <span class="number">#114</span>
+        <span class="name">Tangela</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="grass">Grass</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/114.svg"
+            alt="Tangela image">
+        </div>
+      </li>
+      <li class="pokemon" id="_005">
+        <span class="number">#115</span>
+        <span class="name">Kangaskhan</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="normal">Normal</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/115.svg"
+            alt="Kangaskhan image">
+        </div>
+      </li>
+      <li class="pokemon" id="_003">
+        <span class="number">#116</span>
+        <span class="name">Horsea</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="water">Water</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/116.svg"
+            alt="Horsea image">
+        </div>
+      </li>
+      <li class="pokemon" id="_003">
+        <span class="number">#117</span>
+        <span class="name">Seadra</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="water">Water</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/117.svg"
+            alt="Seadra image">
+        </div>
+      </li>
+      <li class="pokemon" id="_003">
+        <span class="number">#118</span>
+        <span class="name">Goldeen</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="water">Water</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/118.svg"
+            alt="Goldeen image">
+        </div>
+      </li>
+      <li class="pokemon" id="_003">
+        <span class="number">#119</span>
+        <span class="name">Seaking</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="water">Water</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/119.svg"
+            alt="Seaking image">
+        </div>
+      </li>
+      <li class="pokemon" id="_003">
+        <span class="number">#120</span>
+        <span class="name">Staryu</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="water">Water</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/120.svg"
+            alt="Staryu image">
+        </div>
+      </li>
+      <li class="pokemon" id="_003">
+        <span class="number">#121</span>
+        <span class="name">Starmie</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="water">Water</li>
+            <li class="type" id="water">Psychic</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/121.svg"
+            alt="Starmie image">
+        </div>
+      </li>
+      <li class="pokemon" id="_011">
+        <span class="number">#122</span>
+        <span class="name">Mr. Mime</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="psychic">Psychic</li>
+            <li class="type" id="psychic">Fairy</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/122.svg"
+            alt="Mr. Mime image">
+        </div>
+      </li>
+      <li class="pokemon" id="_004">
+        <span class="number">#123</span>
+        <span class="name">Scyther</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="bug">Bug</li>
+            <li class="type" id="bug">Flying</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/123.svg"
+            alt="Scyther image">
+        </div>
+      </li>
+      <li class="pokemon" id="_013">
+        <span class="number">#124</span>
+        <span class="name">Jynx</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="ice">Ice</li>
+            <li class="type" id="ice">Psychic</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/124.svg"
+            alt="Jynx image">
+        </div>
+      </li>
+      <li class="pokemon" id="_007">
+        <span class="number">#125</span>
+        <span class="name">Electabuzz</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="electric">Electric</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/125.svg"
+            alt="Electabuzz image">
+        </div>
+      </li>
+      <li class="pokemon" id="_002">
+        <span class="number">#126</span>
+        <span class="name">Magmar</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="fire">Fire</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/126.svg"
+            alt="Magmar image">
+        </div>
+      </li>
+      <li class="pokemon" id="_004">
+        <span class="number">#127</span>
+        <span class="name">Pinsir</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="bug">Bug</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/127.svg"
+            alt="Pinsir image">
+        </div>
+      </li>
+      <li class="pokemon" id="_005">
+        <span class="number">#128</span>
+        <span class="name">Tauros</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="normal">Normal</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/128.svg"
+            alt="Tauros image">
+        </div>
+      </li>
+      <li class="pokemon" id="_003">
+        <span class="number">#129</span>
+        <span class="name">Magikarp</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="water">Water</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/129.svg"
+            alt="Magikarp image">
+        </div>
+      </li>
+      <li class="pokemon" id="_003">
+        <span class="number">#130</span>
+        <span class="name">Gyarados</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="water">Water</li>
+            <li class="type" id="water">Flying</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/130.svg"
+            alt="Gyarados image">
+        </div>
+      </li>
+      <li class="pokemon" id="_003">
+        <span class="number">#131</span>
+        <span class="name">Lapras</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="water">Water</li>
+            <li class="type" id="water">Ice</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/131.svg"
+            alt="Lapras image">
+        </div>
+      </li>
+      <li class="pokemon" id="_005">
+        <span class="number">#132</span>
+        <span class="name">Ditto</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="normal">Normal</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/132.svg"
+            alt="Ditto image">
+        </div>
+      </li>
+      <li class="pokemon" id="_005">
+        <span class="number">#133</span>
+        <span class="name">Eevee</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="normal">Normal</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/133.svg"
+            alt="Eevee image">
+        </div>
+      </li>
+      <li class="pokemon" id="_003">
+        <span class="number">#134</span>
+        <span class="name">Vaporeon</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="water">Water</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/134.svg"
+            alt="Vaporeon image">
+        </div>
+      </li>
+      <li class="pokemon" id="_007">
+        <span class="number">#135</span>
+        <span class="name">Jolteon</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="electric">Electric</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/135.svg"
+            alt="Jolteon image">
+        </div>
+      </li>
+      <li class="pokemon" id="_002">
+        <span class="number">#136</span>
+        <span class="name">Flareon</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="fire">Electric</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/136.svg"
+            alt="Flareon image">
+        </div>
+      </li>
+      <li class="pokemon" id="_005">
+        <span class="number">#137</span>
+        <span class="name">Porygon</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="normal">Normal</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/137.svg"
+            alt="Porygon image">
+        </div>
+      </li>
+      <li class="pokemon" id="_012">
+        <span class="number">#138</span>
+        <span class="name">Omanyte</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="rock">Rock</li>
+            <li class="type" id="rock">Water</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/138.svg"
+            alt="Omanyte image">
+        </div>
+      </li>
+      <li class="pokemon" id="_012">
+        <span class="number">#139</span>
+        <span class="name">Omastar</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="rock">Rock</li>
+            <li class="type" id="rock">Water</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/139.svg"
+            alt="Omastar image">
+        </div>
+      </li>
+      <li class="pokemon" id="_012">
+        <span class="number">#140</span>
+        <span class="name">Kabuto</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="rock">Rock</li>
+            <li class="type" id="rock">Water</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/140.svg"
+            alt="Kabuto image">
+        </div>
+      </li>
+      <li class="pokemon" id="_012">
+        <span class="number">#141</span>
+        <span class="name">Kabutops</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="rock">Rock</li>
+            <li class="type" id="rock">Water</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/141.svg"
+            alt="Kabutops image">
+        </div>
+      </li>
+      <li class="pokemon" id="_012">
+        <span class="number">#142</span>
+        <span class="name">Aerodactyl</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="rock">Rock</li>
+            <li class="type" id="rock">Flying</li>
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/142.svg"
+            alt="Aerodactyl image">
+        </div>
+      </li>
+      <li class="pokemon" id="_005">
+        <span class="number">#143</span>
+        <span class="name">Snorlax</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="normal">Normal</li>
+
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/143.svg"
+            alt="Snorlax image">
+        </div>
+      </li>
+      <li class="pokemon" id="_013">
+        <span class="number">#144</span>
+        <span class="name">Articuno</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="ice">Ice</li>
+            <li class="type" id="ice">Flying</li>
+
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/144.svg"
+            alt="Articuno image">
+        </div>
+      </li>
+      <li class="pokemon" id="_007">
+        <span class="number">#145</span>
+        <span class="name">Zapdos</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="electric">Electric</li>
+            <li class="type" id="electric">Flying</li>
+
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/145.svg"
+            alt="Zapdos image">
+        </div>
+      </li>
+      <li class="pokemon" id="_002">
+        <span class="number">#146</span>
+        <span class="name">Moltres</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="fire">Fire</li>
+            <li class="type" id="fire">Flying</li>
+
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/146.svg"
+            alt="Moltres image">
+        </div>
+      </li>
+      <li class="pokemon" id="_014">
+        <span class="number">#147</span>
+        <span class="name">Dratini</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="dragon">Dragon</li>
+
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/147.svg"
+            alt="Dratini image">
+        </div>
+      </li>
+      <li class="pokemon" id="_014">
+        <span class="number">#148</span>
+        <span class="name">Dragonair</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="dragon">Dragon</li>
+
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/148.svg"
+            alt="Dragonair image">
+        </div>
+      </li>
+      <li class="pokemon" id="_014">
+        <span class="number">#149</span>
+        <span class="name">Dragonite</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="dragon">Dragon</li>
+
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/149.svg"
+            alt="Dragonite image">
+        </div>
+      </li>
+      <li class="pokemon" id="_011">
+        <span class="number">#150</span>
+        <span class="name">Mewtwo</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="psychic">Dragon</li>
+
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/150.svg"
+            alt="Mewtwo image">
+        </div>
+      </li>
+      <li class="pokemon" id="_011">
+        <span class="number">#151</span>
+        <span class="name">Mew</span>
+
+        <div class="detail">
+          <ol class="types">
+            <li class="type" id="psychic">Dragon</li>
+
+          </ol>
+
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/151.svg"
+            alt="Mew image">
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <script src="/assets/js/main.js"></script>
+</body>
+
+</html>
