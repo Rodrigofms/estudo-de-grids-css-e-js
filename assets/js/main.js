@@ -1,6 +1,6 @@
 var audio = document.getElementById("music");
 audio.volume = 0.02;
-var isPlaying = false;
+var isPlaying = true;
 
 function play() {
   isPlaying ? music.pause() : music.play();
